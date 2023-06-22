@@ -32,7 +32,7 @@ st.title("2x2 Rubik's Cube Color Input")
 
 st.write("Enter the colors for each position on the cube:")
 
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 with col1:
     color_mapping[(0, 0)] = st.selectbox(
         'Top Left',
