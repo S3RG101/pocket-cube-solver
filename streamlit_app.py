@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+from annotated_text import annotated_text
 
 def create_cube():
     # Create a 2x2 Rubik's cube with all sides initially set to white
@@ -8,7 +9,8 @@ def create_cube():
 
 def render_cube(cube):
     # Render the 2D representation of the cube
-    st.write(f'     {cube[0][0]} ─ {cube[0][1]}')
+    annotated_text((cube[0][0], "", ""#8ef""))
+    st.write(f'{cube[0][0]} ─ {cube[0][1]}')
     st.write('    │       │')
     st.write(f'{cube[1][0]} ─ {cube[1][1]}')
 
