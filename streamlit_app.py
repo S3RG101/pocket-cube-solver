@@ -5,6 +5,8 @@ from annotated_text import annotated_text
 def create_cube():
     # Create a 2x2 Rubik's cube with all sides initially set to white
     cube = np.array([['W', 'W'], ['W', 'W']])
+    # start top or bottom and go clockwise
+    # solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
     return cube
 
 def render_cube(cube):
@@ -30,7 +32,7 @@ color_mapping = {
 
 # Render the UI for color input
 st.title("2x2 Rubik's Cube Optimal Solver")
-
+st.write("Please orient the cube such that the white, red and blue corner is located as shown")
 st.write("Enter the colors for each position on the cube:")
 
 col1, col2 = st.columns(2)
