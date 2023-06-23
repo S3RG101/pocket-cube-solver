@@ -9,7 +9,7 @@ def create_cube():
 
 def render_cube(cube):
     # Render the 2D representation of the cube
-    annotated_text((cube[0][0], "", "#8ef"), " ─ ", (cube[0][1], "", "#0B3"))
+    annotated_text((cube[0][0], "", color_hex[color_options.index(cube[0][0]])), (cube[0][1], "", "#0B3"))
     st.write(f'{cube[0][0]} ─ {cube[0][1]}')
     st.write('    │       │')
     st.write(f'{cube[1][0]} ─ {cube[1][1]}')
@@ -20,6 +20,7 @@ cube = create_cube()
 
 # Define the color options
 color_options = ['W', 'R', 'B', 'O', 'G', 'Y']
+color_hex = ["#FEE","#F00","#00F","#F70","#6C0","#FF0"]
 
 # Set the default colors for each position
 color_mapping = {
@@ -30,7 +31,7 @@ color_mapping = {
 }
 
 # Render the UI for color input
-st.title("2x2 Rubik's Cube Color Input")
+st.title("2x2 Rubik's Cube Optimal Solver")
 
 st.write("Enter the colors for each position on the cube:")
 
