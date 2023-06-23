@@ -9,7 +9,7 @@ def create_cube():
 
 def render_cube(cube):
     # Render the 2D representation of the cube
-    annotated_text((cube[0][0], "", color_hex[color_options.index(cube[0][0]])), (cube[0][1], "", "#0B3"))
+    annotated_text((cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[0][1], "", "#0B3"))
     st.write(f'{cube[0][0]} ─ {cube[0][1]}')
     st.write('    │       │')
     st.write(f'{cube[1][0]} ─ {cube[1][1]}')
