@@ -57,7 +57,7 @@ with col1:
     st.write("")
     color_mapping[(7, 1)] = st.selectbox(
         options=color_options,
-        index=color_options.index(color_mapping[(7, 1)])
+        index=color_options.index(color_mapping[(7, 1)]),
         label_visibility="collapsed"
     )
     color_mapping[(3, 2)] = st.selectbox(
