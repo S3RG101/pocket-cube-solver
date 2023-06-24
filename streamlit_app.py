@@ -119,6 +119,45 @@ with col3:
         index=color_options.index(color_mapping[(3, 0)]),
         label_visibility="collapsed"
     )
+with col4:
+    color_mapping[(6, 0)] = st.selectbox(
+        '10',
+        options=color_options,
+        index=color_options.index(color_mapping[(6, 0)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(5, 0)] = st.selectbox(
+        '11',
+        options=color_options,
+        index=color_options.index(color_mapping[(5, 0)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(5, 2)] = st.selectbox(
+        '12',
+        options=color_options,
+        index=color_options.index(color_mapping[(5, 2)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(1, 1)] = st.selectbox(
+        '13',
+        options=color_options,
+        index=color_options.index(color_mapping[(1, 1)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(1, 0)] = st.selectbox(
+        '14',
+        options=color_options,
+        index=color_options.index(color_mapping[(1, 0)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(2, 0)] = st.selectbox(
+        '15',
+        options=color_options,
+        index=color_options.index(color_mapping[(2, 0)]),
+        label_visibility="collapsed"
+    )
+
+
 
 # Update the cube with the selected colors
 for i in range(2):
