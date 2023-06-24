@@ -50,10 +50,6 @@ st.title("2x2 Rubik's Cube Optimal Solver")
 st.write("Please orient the cube such that the white, red and blue corner is located as shown")
 st.write("Enter the colors for each position on the cube:")
 
-# Store the initial value of widgets in session state
-if "visibility" not in st.session_state:
-    st.session_state.visibility = "collapsed"
-
 col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
 
 with col1:
@@ -62,6 +58,7 @@ with col1:
     color_mapping[(7, 1)] = st.selectbox(
         options=color_options,
         index=color_options.index(color_mapping[(7, 1)])
+        label_visibility="collapsed"
     )
     color_mapping[(3, 2)] = st.selectbox(
         'Bottom Left',
