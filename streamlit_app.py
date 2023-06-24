@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 from annotated_text import annotated_text
+import tree_search as ts
 
 def create_cube():
     # Create a 2x2 Rubik's cube with all sides initially set to white
@@ -269,4 +270,6 @@ prog_cube=[]
 for corner in cube:
     prog_cube.append(get_piece(corner))
 
-st.write(prog_cube)
+# st.write(prog_cube)
+if st.button('Solve!'):
+    st.write(ts.get_least_solution(ts.Cube(scramble=prog_cube)))
