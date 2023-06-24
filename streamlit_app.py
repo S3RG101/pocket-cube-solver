@@ -220,11 +220,11 @@ with col8:
 
 
 # Update the cube with the selected colors
-for i in range(2):
-    for j in range(2):
+for i in range(8):
+    for j in range(3):
         cube[i][j] = color_mapping[(i, j)]
 
 st.write("Rubik's Cube:")
 # Render the 2D representation of the cube
-annotated_text((cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[0][1], "", color_hex[color_options.index(cube[0][1])]))
-annotated_text((cube[1][0], "", color_hex[color_options.index(cube[1][0])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]))
+annotated_text((" ","", '#FFF'), (" ","", '#FFF'), (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[0][1], "", color_hex[color_options.index(cube[0][1])]))
+annotated_text((cube[1][0], "", color_hex[color_options.index(cube[1][0])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]))
