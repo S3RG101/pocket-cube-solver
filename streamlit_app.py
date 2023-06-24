@@ -156,6 +156,66 @@ with col4:
         index=color_options.index(color_mapping[(2, 0)]),
         label_visibility="collapsed"
     )
+with col5:
+    for i in range(7):
+        st.write("")
+    color_mapping[(5, 1)] = st.selectbox(
+        '16',
+        options=color_options,
+        index=color_options.index(color_mapping[(5, 1)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(1, 2)] = st.selectbox(
+        '17',
+        options=color_options,
+        index=color_options.index(color_mapping[(1, 2)]),
+        label_visibility="collapsed"
+    )
+with col6:
+    for i in range(7):
+        st.write("")
+    color_mapping[(6, 2)] = st.selectbox(
+        '18',
+        options=color_options,
+        index=color_options.index(color_mapping[(6, 2)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(2, 1)] = st.selectbox(
+        '19',
+        options=color_options,
+        index=color_options.index(color_mapping[(2, 1)]),
+        label_visibility="collapsed"
+    )
+with col7:
+    for i in range(7):
+        st.write("")
+    color_mapping[(6, 1)] = st.selectbox(
+        '20',
+        options=color_options,
+        index=color_options.index(color_mapping[(6, 1)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(2, 2)] = st.selectbox(
+        '21',
+        options=color_options,
+        index=color_options.index(color_mapping[(2, 2)]),
+        label_visibility="collapsed"
+    )
+with col8:
+    for i in range(7):
+        st.write("")
+    color_mapping[(7, 2)] = st.selectbox(
+        '22',
+        options=color_options,
+        index=color_options.index(color_mapping[(7, 2)]),
+        label_visibility="collapsed"
+    )
+    color_mapping[(3, 1)] = st.selectbox(
+        '23',
+        options=color_options,
+        index=color_options.index(color_mapping[(3, 1)]),
+        label_visibility="collapsed"
+    )
 
 
 
