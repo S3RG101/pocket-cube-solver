@@ -247,5 +247,5 @@ annotated_text((cube[3][2], "", color_hex[color_options.index(cube[3][2])]),
                (cube[2][2], "", color_hex[color_options.index(cube[2][2])]), 
                (cube[3][1], "", color_hex[color_options.index(cube[3][1])]))
 
-annotated_text(("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[1][0], "", color_hex[color_options.index(cube[1][0])]))
+annotated_text(("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[1][0], "", color_hex[color_options.index(cube[1][0])]))
 annotated_text(("", " ", "#FFF"), ("", " ", "#FFF"), (cube[3][0], "", color_hex[color_options.index(cube[3][0])]), (cube[2][0], "", color_hex[color_options.index(cube[2][0])]))
