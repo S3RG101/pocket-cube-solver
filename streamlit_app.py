@@ -226,5 +226,26 @@ for i in range(8):
 
 st.write("Rubik's Cube:")
 # Render the 2D representation of the cube
-annotated_text(("", " ", "#FFF"), (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[0][1], "", color_hex[color_options.index(cube[0][1])]))
-annotated_text((cube[1][0], "", color_hex[color_options.index(cube[1][0])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]))
+annotated_text(("", " ", "#FFF"), ("", " ", "#FFF"), (cube[7][0], "", color_hex[color_options.index(cube[7][0])]), (cube[6][0], "", color_hex[color_options.index(cube[6][0])]))
+annotated_text(("", " ", "#FFF"), ("", " ", "#FFF"), (cube[4][0], "", color_hex[color_options.index(cube[4][0])]), (cube[5][0], "", color_hex[color_options.index(cube[5][0])]))
+
+annotated_text((cube[7][1], "", color_hex[color_options.index(cube[7][1])]), 
+               (cube[4][2], "", color_hex[color_options.index(cube[4][2])]), 
+               (cube[4][1], "", color_hex[color_options.index(cube[4][1])]),
+               (cube[5][2], "", color_hex[color_options.index(cube[5][2])]), 
+               (cube[5][1], "", color_hex[color_options.index(cube[5][1])]), 
+               (cube[6][2], "", color_hex[color_options.index(cube[6][2])]),
+               (cube[6][1], "", color_hex[color_options.index(cube[6][1])]), 
+               (cube[7][2], "", color_hex[color_options.index(cube[7][2])]))
+
+annotated_text((cube[3][2], "", color_hex[color_options.index(cube[3][2])]), 
+               (cube[0][1], "", color_hex[color_options.index(cube[0][1])]), 
+               (cube[0][2], "", color_hex[color_options.index(cube[0][2])]),
+               (cube[1][1], "", color_hex[color_options.index(cube[1][1])]), 
+               (cube[1][2], "", color_hex[color_options.index(cube[1][2])]), 
+               (cube[2][1], "", color_hex[color_options.index(cube[2][1])]),
+               (cube[2][2], "", color_hex[color_options.index(cube[2][2])]), 
+               (cube[3][1], "", color_hex[color_options.index(cube[3][1])]))
+
+annotated_text(("", " ", "#FFF"), ("", " ", "#FFF"), (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[1][0], "", color_hex[color_options.index(cube[1][0])]))
+annotated_text(("", " ", "#FFF"), ("", " ", "#FFF"), (cube[3][0], "", color_hex[color_options.index(cube[3][0])]), (cube[2][0], "", color_hex[color_options.index(cube[2][0])]))
