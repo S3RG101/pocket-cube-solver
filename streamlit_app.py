@@ -226,5 +226,5 @@ for i in range(8):
 
 st.write("Rubik's Cube:")
 # Render the 2D representation of the cube
-annotated_text("I see youuu", (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[0][1], "", color_hex[color_options.index(cube[0][1])]))
+annotated_text("I see youuu      ", (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[0][1], "", color_hex[color_options.index(cube[0][1])]))
 annotated_text((cube[1][0], "", color_hex[color_options.index(cube[1][0])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]), (cube[1][1], "", color_hex[color_options.index(cube[1][1])]))
