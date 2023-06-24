@@ -56,13 +56,13 @@ with col1:
     for i in range(7):
         st.write("")
     color_mapping[(7, 1)] = st.selectbox(
-        'Top right',
+        '0',
         options=color_options,
         index=color_options.index(color_mapping[(7, 1)]),
         label_visibility="collapsed"
     )
     color_mapping[(3, 2)] = st.selectbox(
-        'Bottom Left',
+        '1',
         options=color_options,
         index=color_options.index(color_mapping[(3, 2)]),
         label_visibility="collapsed"
@@ -71,50 +71,50 @@ with col2:
     for i in range(7):
         st.write("")
     color_mapping[(4, 2)] = st.selectbox(
-        'Top Right',
+        '2',
         options=color_options,
         index=color_options.index(color_mapping[(4, 2)]),
         label_visibility="collapsed"
     )
     color_mapping[(0, 1)] = st.selectbox(
-        'Bottom Right',
+        '3',
         options=color_options,
         index=color_options.index(color_mapping[(0, 1)]),
         label_visibility="collapsed"
     )
 with col3:
     color_mapping[(7, 0)] = st.selectbox(
-        'Top Right',
+        '4',
         options=color_options,
         index=color_options.index(color_mapping[(7, 0)]),
         label_visibility="collapsed"
     )
     color_mapping[(4, 0)] = st.selectbox(
-        'Bottom Right',
+        '5',
         options=color_options,
         index=color_options.index(color_mapping[(4, 0)]),
         label_visibility="collapsed"
     )
     color_mapping[(4, 1)] = st.selectbox(
-        'Top Right',
+        '6',
         options=color_options,
         index=color_options.index(color_mapping[(4, 1)]),
         label_visibility="collapsed"
     )
     color_mapping[(0, 2)] = st.selectbox(
-        'Bottom Right',
+        '7',
         options=color_options,
         index=color_options.index(color_mapping[(0, 2)]),
         label_visibility="collapsed"
     )
     color_mapping[(0, 0)] = st.selectbox(
-        'Top Right',
+        '8',
         options=color_options,
         index=color_options.index(color_mapping[(0, 0)]),
         label_visibility="collapsed"
     )
     color_mapping[(3, 0)] = st.selectbox(
-        'Bottom Right',
+        '9',
         options=color_options,
         index=color_options.index(color_mapping[(3, 0)]),
         label_visibility="collapsed"
