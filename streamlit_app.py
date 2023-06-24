@@ -258,10 +258,10 @@ def get_piece(corner):
         if set(piece) == set(corner):
             if corner[0]=='W' or corner[0]=='Y':
                 orientation = 0
-            elif corner[1]=='W' or corner[2]=='Y':
-                orientation = 1
-            elif corner[2]=='W' or corner[1]=='Y':
+            elif corner[2]=='W' or corner[2]=='Y':
                 orientation = 2
+            elif corner[1]=='W' or corner[1]=='Y':
+                orientation = 1
             return [idx,orientation]
     return [8,8]
 
