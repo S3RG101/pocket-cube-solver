@@ -1,5 +1,5 @@
 import streamlit as st
-import numpy as np
+# import numpy as np
 from annotated_text import annotated_text
 import tree_search as ts
 
@@ -8,7 +8,9 @@ def create_cube():
     #cube = np.array([['W', 'W'], ['W', 'W']])
     # start top or bottom and go clockwise
     # solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
-    cube = np.array([['W','B','R'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W']])
+    
+    # cube = np.array([['W','B','R'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W']])
+    cube = [['W','B','R'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W']]
     return cube
 
 # Create the 2x2 Rubik's cube
@@ -252,7 +254,8 @@ annotated_text(("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), (cube[0][0]
 annotated_text(("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), (cube[3][0], "", color_hex[color_options.index(cube[3][0])]), (cube[2][0], "", color_hex[color_options.index(cube[2][0])]))
 
 #the index of the list is the piece
-solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
+# solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
+solved_cube = [['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']]
 
 def get_piece(corner):
     for idx,piece in enumerate(solved_cube):
