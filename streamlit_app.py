@@ -6,7 +6,7 @@ def create_cube():
     # Create a 2x2 Rubik's cube with all sides initially set to white
     #cube = np.array([['W', 'W'], ['W', 'W']])
     # start top or bottom and go clockwise
-    #solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
+    # solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
     cube = np.array([['W','B','R'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W']])
     return cube
 
@@ -249,3 +249,24 @@ annotated_text((cube[3][2], "", color_hex[color_options.index(cube[3][2])]),
 
 annotated_text(("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), (cube[0][0], "", color_hex[color_options.index(cube[0][0])]), (cube[1][0], "", color_hex[color_options.index(cube[1][0])]))
 annotated_text(("", "", "#FFF"), ("", "", "#FFF"), ("", "", "#FFF"), (cube[3][0], "", color_hex[color_options.index(cube[3][0])]), (cube[2][0], "", color_hex[color_options.index(cube[2][0])]))
+
+#the index of the list is the piece
+solved_cube = np.array([['W','B','R'],['W','R','G'],['W','G','O'],['W','O','B'],['Y','R','B'],['Y','G','R'],['Y','O','G'],['Y','B','O']])
+
+def get_piece(corner):
+    for idx,piece in enumerate(solved_cube):
+        if set(piece) == set(corner):
+            if corner[0]=='W' or corner[0]=='Y':
+                orientation = 0
+            elif corner[1]=='W' or corner[2]=='Y':
+                orientation = 1
+            elif corner[2]=='W' or corner[1]=='Y':
+                orientation = 2
+            return [idx,orientation]
+    return [8,8]
+
+prog_cube=[]
+for corner in cube:
+    prog_cube.append(get_piece(corner))
+
+st.write(prog_cube)
