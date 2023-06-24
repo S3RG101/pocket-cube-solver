@@ -56,6 +56,7 @@ with col1:
     st.write("")
     st.write("")
     color_mapping[(7, 1)] = st.selectbox(
+        'Top right',
         options=color_options,
         index=color_options.index(color_mapping[(7, 1)]),
         label_visibility="collapsed"
