@@ -227,7 +227,7 @@ for i in range(8):
 st.write("Rubik's Cube:")
 # Render the 2D representation of the cube
 annotated_text(("", " ", "#FFF"), ("", " ", "#FFF"), (cube[7][0], "", color_hex[color_options.index(cube[7][0])]), (cube[6][0], "", color_hex[color_options.index(cube[6][0])]))
-annotated_text((" ", "  ", "#FFF"), (cube[4][0], "", color_hex[color_options.index(cube[4][0])]), (cube[5][0], "", color_hex[color_options.index(cube[5][0])]))
+annotated_text(("  ", "    ", "#FFF"), (cube[4][0], "", color_hex[color_options.index(cube[4][0])]), (cube[5][0], "", color_hex[color_options.index(cube[5][0])]))
 
 annotated_text((cube[7][1], "", color_hex[color_options.index(cube[7][1])]), 
                (cube[4][2], "", color_hex[color_options.index(cube[4][2])]), 
