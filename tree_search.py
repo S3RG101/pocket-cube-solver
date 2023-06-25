@@ -1,5 +1,5 @@
 # God's Algorithm for a 2x2 pocket cube
-# By Sergio Lopez 5-23-2021
+# By Sergio Lopez original version 5-23-2021, edited version 6-25-2023
 
 # A cube will be represented by strings
 
@@ -20,6 +20,7 @@
 
 # For example, solved cube is '10203040506070'
 
+import time
 import random
 import csv
 
@@ -59,7 +60,7 @@ class Cube:
             self.cube[1] = [self.cube[2][0], (self.cube[2][1] + 1) % 3]
             self.cube[2] = [self.cube[6][0], (self.cube[6][1] + 2) % 3]
             self.cube[6] = [self.cube[5][0], (self.cube[5][1] + 1) % 3]
-            self.cube[5] = [save[0], (save[1] + 2) % 3]
+            self.cube[5] = [save[0], (save[1]+2) % 3]
         elif move == 'r_prime':
             save = self.cube[1]
             self.cube[1] = [self.cube[5][0], (self.cube[5][1] + 1) % 3]
@@ -118,13 +119,14 @@ def intersection(dict1, dict2):
     for key1 in dict1:
         for key2 in dict2:
             if dict1[key1] == dict2[key2]:
+                inter.append(key2+' / '+opposite_move(key1))
+                # Comment line below to show all the god algorithms
                 return inter
-                inter.append(key2 + ' / ' + opposite_move(key1))
+                # break
     if not inter:
         return None
-    else:
-        return inter
-
+    # else:
+    #     return inter
 
 def opposite_move(moves):
     add_str = ''
@@ -145,26 +147,25 @@ def opposite_move(moves):
             add_str += f' {char}'
     return add_str[::-1]
 
-
 def moves_to_string(move):
     if move == 'r_normal':
-        add_str = 'R'
+        add_str = 'R '
     elif move == 'r_prime':
-        add_str = 'r'
+        add_str = 'r '
     elif move == 'r_twice':
-        add_str = '2r'
+        add_str = '2r '
     elif move == 'u_normal':
-        add_str = 'U'
+        add_str = 'U '
     elif move == 'u_prime':
-        add_str = 'u'
+        add_str = 'u '
     elif move == 'u_twice':
-        add_str = '2u'
+        add_str = '2u '
     elif move == 'b_normal':
-        add_str = 'B'
+        add_str = 'B '
     elif move == 'b_prime':
-        add_str = 'b'
+        add_str = 'b '
     else:
-        add_str = '2b'
+        add_str = '2b '
     return add_str
 
 
@@ -181,7 +182,6 @@ u_moved = {0: 'r_normal', 1: 'r_prime', 2: 'r_twice',
 b_moved = {0: 'r_normal', 1: 'r_prime', 2: 'r_twice',
            3: 'u_normal', 4: 'u_prime', 5: 'u_twice'}
 
-
 def move_dic(last_move):
     if last_move == 'R' or last_move == 'r' or last_move == 'r_twice':
         return r_moved
@@ -193,6 +193,10 @@ def move_dic(last_move):
         return all_moves
 
 
+solved_cube = Cube()
+# mixed_cube = Cube(scramble=[[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [6, 0], [5, 0], [7, 0]])
+# mixed_cube = Cube()
+# mixed_cube.move('b_prime')
 
 # This is an 11-move solve! [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [6, 1], [5, 2], [7, 0]] 196 solutions
 # Perm-t is a 10-move solve! [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [6, 0], [5, 0], [7, 0]] 20 solutions
@@ -200,9 +204,7 @@ def move_dic(last_move):
 # 3 rotated corners is a 8-move solve! [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 1], [6, 1], [7, 1]] 8 solutions
 # beginners placing corners is an 8-move! [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [7, 1], [5, 1], [6, 1]] 6 sols.
 
-def get_least_solution(mixed_cube_list):
-    mixed_cube = Cube(scramble=mixed_cube_list)
-    solved_cube = Cube()
+def solve_cube(mixed_cube):
     for depth in range(6):
         copy_dict = solved_cube.states.copy()
         for key in copy_dict:
@@ -216,18 +218,17 @@ def get_least_solution(mixed_cube_list):
                 solved_cube.cube = solved_cube.states[key].copy()
                 solved_cube.move(move_str)
                 # print(solved_cube.cube)
-                solved_cube.states[key + moves_to_string(move_str)] = solved_cube.cube.copy()
+                solved_cube.states[key+moves_to_string(move_str)] = solved_cube.cube.copy()
                 # print(solved_cube.states)
                 # solved_cube.cube = solved_cube.states[key]
             del solved_cube.states[key]
 
         inter = intersection(solved_cube.states, mixed_cube.states)
         if inter is None:
-            pass
+            print(f'No solution yet in depth {depth}')
         else:
-            del solved_cube
-            del mixed_cube
-            return 2 * (depth + 1) - 1
+            print(f'SOLVED IN {2*(depth+1)-1} MOVES!', inter, len(inter))
+            break
 
         copy_dict = mixed_cube.states.copy()
         for key in copy_dict:
@@ -240,14 +241,13 @@ def get_least_solution(mixed_cube_list):
                 move_str = dic_moves[move]
                 mixed_cube.cube = mixed_cube.states[key].copy()
                 mixed_cube.move(move_str)
-                mixed_cube.states[key + moves_to_string(move_str)] = mixed_cube.cube.copy()
+                mixed_cube.states[key+moves_to_string(move_str)] = mixed_cube.cube.copy()
                 # mixed_cube.cube = mixed_cube.states[key]
             del mixed_cube.states[key]
 
         inter = intersection(solved_cube.states, mixed_cube.states)
         if inter is None:
-            pass
+            print(f'No solution yet in depth {depth}')
         else:
-            del solved_cube
-            del mixed_cube
-            return 2 * (depth + 1)
+            print(f'SOLVED IN {2*(depth+1)} MOVES!', inter, len(inter))
+            break
