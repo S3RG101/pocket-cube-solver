@@ -115,13 +115,12 @@ class Cube:
 
 
 def intersection(dict1, dict2):
-    inter = []
     for key1 in dict1:
         for key2 in dict2:
             if dict1[key1] == dict2[key2]:
-                inter.append(key2+opposite_move(key1))
+                move_sol = key2+opposite_move(key1)
                 # Comment line below to show all the god algorithms
-                return inter
+                return move_sol
                 # break
     if not inter:
         return None
