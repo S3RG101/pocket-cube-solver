@@ -273,6 +273,8 @@ prog_cube=[]
 for corner in cube:
     prog_cube.append(get_piece(corner))
 
-# st.write(prog_cube)
+# fed it into the other python script to solve it
 if st.button('Solve!'):
-    st.write(ts.get_least_solution(ts.Cube(scramble=prog_cube)))
+    mixed_cube = ts.Cube(scramble=prog_cube)
+    depth, moves = ts.solve_cube(mixed_cube)
+    st.write(f'Found a solution of depth {depth} which is the following: {moves}')
