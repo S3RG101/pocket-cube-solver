@@ -119,7 +119,7 @@ def intersection(dict1, dict2):
     for key1 in dict1:
         for key2 in dict2:
             if dict1[key1] == dict2[key2]:
-                inter.append(key2+' / '+opposite_move(key1))
+                inter.append(key2+opposite_move(key1))
                 # Comment line below to show all the god algorithms
                 return inter
                 # break
