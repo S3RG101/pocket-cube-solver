@@ -113,8 +113,9 @@ class Cube:
             self.cube[3] = self.cube[6]
             self.cube[6] = save3
 
-move_sol = None
+
 def intersection(dict1, dict2):
+    move_sol = None
     for key1 in dict1:
         for key2 in dict2:
             if dict1[key1] == dict2[key2]:
