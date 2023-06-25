@@ -227,8 +227,8 @@ def solve_cube(mixed_cube):
         if inter is None:
             print(f'No solution yet in depth {depth}')
         else:
-            print(f'SOLVED IN {2*(depth+1)-1} MOVES!', inter, len(inter))
-            break
+            return 2*(depth+1)-1, inter
+            # break
 
         copy_dict = mixed_cube.states.copy()
         for key in copy_dict:
@@ -249,5 +249,5 @@ def solve_cube(mixed_cube):
         if inter is None:
             print(f'No solution yet in depth {depth}')
         else:
-            print(f'SOLVED IN {2*(depth+1)} MOVES!', inter, len(inter))
-            break
+            return 2*(depth+1), inter
+            # break
