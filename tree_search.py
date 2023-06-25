@@ -123,9 +123,9 @@ def intersection(dict1, dict2):
                 # Uncommented brings only one solution
                 return move_sol
                 # break
-    if not move_sol:
+    if move_sol == None:
         return None
-    # else:
+    # else: (Also uncomment this line to show all solutions)
     #     return inter
 
 def opposite_move(moves):
