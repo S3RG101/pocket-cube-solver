@@ -307,13 +307,11 @@ if st.button('Solve!'):
     dr1, dr2, dr3, dr4, dr5, dr6 = st.columns(6)
     
     with dr1:
-        st.write(send_img())
         try:
             st.image(send_img())
         except:
             pass
     with dr2:
-        st.write(send_img())
         try:
             st.image(send_img())
         except:
