@@ -272,12 +272,13 @@ def get_piece(corner):
 prog_cube=[]
 for corner in cube:
     prog_cube.append(get_piece(corner))
+st.write(prog_cube)
 
 # fed it into the other python script to solve it
 if st.button('Solve!'):
     mixed_cube = ts.Cube(scramble=prog_cube)
     depth, moves = ts.solve_cube(mixed_cube)
-    # st.write(f'Found a solution of depth {depth} which is the following: {moves}')
+    st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
     moves_dic = {
         "r":"Rp.png",
@@ -292,7 +293,7 @@ if st.button('Solve!'):
     }
     
     move_arr = moves.split()
-    # st.write(move_arr)
+    st.write(move_arr)
     
     send_img_count = 0
     def send_img():
