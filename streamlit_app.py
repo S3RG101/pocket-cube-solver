@@ -278,3 +278,5 @@ if st.button('Solve!'):
     mixed_cube = ts.Cube(scramble=prog_cube)
     depth, moves = ts.solve_cube(mixed_cube)
     st.write(f'Found a solution of depth {depth} which is the following: {moves}')
+
+st.image("2B.png")
