@@ -279,11 +279,52 @@ if st.button('Solve!'):
     depth, moves = ts.solve_cube(mixed_cube)
     st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
+moves_dic = {
+    "r":f"{Rp}.png",
+    "R":f"{R}.png",
+    "R2":f"{2R}.png",
+    "u":f"{Up}.png",
+    "U":f"{U}.png",
+    "U2":f"{2U}.png",
+    "b":f"{Bp}.png",
+    "B":f"{B}.png",
+    "B2":f"{2B}.png"
+}
+
+move_arr = moves.split()
+
+send_img_count = 0
+def send_img():
+    try:
+        img = moves_dic[move_arr[send_img_count]]
+        send_img_count += 1
+        return img
+    except:
+        return None
+
 dr1, dr2, dr3, dr4, dr5, dr6 = st.columns(6)
 
 with dr1:
-    st.image("2B.png")
+    st.image(send_img())
 with dr2:
-    st.image("U.png")
+    st.image(send_img())
 with dr3:
-    st.image("B.png")
+    st.image(send_img())
+with dr4:
+    st.image(send_img())
+with dr5:
+    st.image(send_img())
+with dr6:
+    st.image(send_img())
+with dr1:
+    st.image(send_img())
+with dr2:
+    st.image(send_img())
+with dr3:
+    st.image(send_img())
+with dr4:
+    st.image(send_img())
+with dr5:
+    st.image(send_img())
+with dr6:
+    st.image(send_img())
