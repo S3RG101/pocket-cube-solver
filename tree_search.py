@@ -146,7 +146,7 @@ def opposite_move(moves):
             add_str += 'B'
         else:
             add_str += f' {char}'
-    return add_str
+    return add_str[::-1]
 
 def moves_to_string(move):
     if move == 'r_normal':
