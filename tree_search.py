@@ -146,7 +146,7 @@ def opposite_move(moves):
             add_str += 'B'
         else:
             add_str += f' {char}'
-    return add_str[::-1]
+    return add_str
 
 def moves_to_string(move):
     if move == 'r_normal':
@@ -154,19 +154,19 @@ def moves_to_string(move):
     elif move == 'r_prime':
         add_str = 'r '
     elif move == 'r_twice':
-        add_str = '2r '
+        add_str = '2R '
     elif move == 'u_normal':
         add_str = 'U '
     elif move == 'u_prime':
         add_str = 'u '
     elif move == 'u_twice':
-        add_str = '2u '
+        add_str = '2U '
     elif move == 'b_normal':
         add_str = 'B '
     elif move == 'b_prime':
         add_str = 'b '
     else:
-        add_str = '2b '
+        add_str = '2B '
     return add_str
 
 
