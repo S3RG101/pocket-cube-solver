@@ -308,59 +308,59 @@ if st.button('Solve!'):
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr2:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr3:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr4:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr5:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr6:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr1:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr2:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr3:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr4:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr5:
         try:
             st.image(send_img())
         except:
-            break
+            pass
     with dr6:
         try:
             st.image(send_img())
         except:
-            break
+            pass
