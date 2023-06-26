@@ -292,6 +292,7 @@ if st.button('Solve!'):
     }
     
     move_arr = moves.split()
+    st.write(move_arr)
     
     send_img_count = 0
     def send_img():
