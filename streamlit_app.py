@@ -296,12 +296,13 @@ if st.button('Solve!'):
     
     send_img_count = 0
     def send_img():
-        # try:
-        img = moves_dic[move_arr[send_img_count]]
-        send_img_count += 1
-        return img
-        # except:
-            # return None
+        try:
+            global send_img_count
+            img = moves_dic[move_arr[send_img_count]]
+            send_img_count += 1
+            return img
+        except:
+            return None
     
     dr1, dr2, dr3, dr4, dr5, dr6 = st.columns(6)
     
