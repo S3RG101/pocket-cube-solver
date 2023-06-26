@@ -279,4 +279,11 @@ if st.button('Solve!'):
     depth, moves = ts.solve_cube(mixed_cube)
     st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
-st.image("2B.png")
+dr1, dr2, dr3, dr4, dr5, dr6 = st.columns(6)
+
+with dr1:
+    st.image("2B.png")
+with dr2:
+    st.image("U.png")
+with dr3:
+    st.image("B.png")
