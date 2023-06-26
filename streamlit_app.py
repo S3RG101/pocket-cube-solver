@@ -280,15 +280,15 @@ if st.button('Solve!'):
     st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
 moves_dic = {
-    "r":f"{Rp}.png",
-    "R":f"{R}.png",
-    "R2":f"{2R}.png",
-    "u":f"{Up}.png",
-    "U":f"{U}.png",
-    "U2":f"{2U}.png",
-    "b":f"{Bp}.png",
-    "B":f"{B}.png",
-    "B2":f"{2B}.png"
+    "r":"Rp.png",
+    "R":"R.png",
+    "R2":"2R.png",
+    "u":"Up.png",
+    "U":f"U.png",
+    "U2":"2U.png",
+    "b":"Bp.png",
+    "B":"B.png",
+    "B2":"2B.png"
 }
 
 move_arr = moves.split()
