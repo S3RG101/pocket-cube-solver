@@ -283,13 +283,16 @@ if st.button('Solve!'):
     moves_dic = {
         "r":"Rp.png",
         "R":"R.png",
-        "R2":"2R.png",
+        "2R":"2R.png",
+        "2r":"2R.png",
         "u":"Up.png",
         "U":f"U.png",
-        "U2":"2U.png",
+        "2U":"2U.png",
+        "2u":"2U.png",
         "b":"Bp.png",
         "B":"B.png",
-        "B2":"2B.png"
+        "2B":"2B.png",
+        "2b":"2B.png"
     }
     
     move_arr = moves.split()
