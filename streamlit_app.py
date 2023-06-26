@@ -277,7 +277,7 @@ for corner in cube:
 if st.button('Solve!'):
     mixed_cube = ts.Cube(scramble=prog_cube)
     depth, moves = ts.solve_cube(mixed_cube)
-    st.write(f'Found a solution of depth {depth} which is the following: {moves}')
+    # st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
     moves_dic = {
         "r":"Rp.png",
@@ -292,7 +292,7 @@ if st.button('Solve!'):
     }
     
     move_arr = moves.split()
-    st.write(move_arr)
+    # st.write(move_arr)
     
     send_img_count = 0
     def send_img():
