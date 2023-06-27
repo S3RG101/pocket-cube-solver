@@ -272,10 +272,14 @@ def get_piece(corner):
 prog_cube=[]
 for corner in cube:
     prog_cube.append(get_piece(corner))
-st.write(prog_cube)
+# st.write(prog_cube)
+
+button = st.button('Solve')
 
 # fed it into the other python script to solve it
-if st.button('Solve!'):
+if button and [8,8] in cube:
+    st.write('There is something wrong with the color configuration. Please check again.')
+if button and [8,8] not in prog_cube:
     mixed_cube = ts.Cube(scramble=prog_cube)
     depth, moves = ts.solve_cube(mixed_cube)
     st.write(f'Found a solution of depth {depth} which is the following: {moves}')
