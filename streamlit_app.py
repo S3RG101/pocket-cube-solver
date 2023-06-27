@@ -204,11 +204,8 @@ with col7:
         index=color_options.index(color_mapping[(2, 2)]),
         label_visibility="collapsed"
     )
-with col8:
-    if st.button('Reset'):
-        st.experimental_rerun()
-        
-    for i in range(4):
+with col8:        
+    for i in range(7):
         st.write("")
     color_mapping[(7, 2)] = st.selectbox(
         '22',
