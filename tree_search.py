@@ -206,6 +206,8 @@ solved_cube = Cube()
 # beginners placing corners is an 8-move! [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [7, 1], [5, 1], [6, 1]] 6 sols.
 
 def solve_cube(mixed_cube):
+    inter = []
+    depth = 0
     for depth in range(6):
         copy_dict = solved_cube.states.copy()
         for key in copy_dict:
