@@ -234,7 +234,7 @@ with col8:
             (7, 2): 'W',
         }
         
-    for i in range(3):
+    for i in range(4):
         st.write("")
     color_mapping[(7, 2)] = st.selectbox(
         '22',
