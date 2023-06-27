@@ -93,18 +93,18 @@ class Cube:
             self.cube[6] = save4
             self.cube[5] = self.cube[7]
             self.cube[7] = save5
-        elif move == 'b_normal':  # Equal to u_normal
-            save = self.cube[2]
-            self.cube[2] = [self.cube[6][0], (self.cube[6][1] + 1) % 3]
-            self.cube[6] = [self.cube[7][0], (self.cube[7][1] + 2) % 3]
-            self.cube[7] = [self.cube[3][0], (self.cube[3][1] + 1) % 3]
-            self.cube[3] = [save[0], (save[1] + 2) % 3]
-        elif move == 'b_prime':
+        elif move == 'b_normal':  # Opposite to u_normal
             save = self.cube[2]
             self.cube[2] = [self.cube[3][0], (self.cube[3][1] + 1) % 3]
             self.cube[3] = [self.cube[7][0], (self.cube[7][1] + 2) % 3]
             self.cube[7] = [self.cube[6][0], (self.cube[6][1] + 1) % 3]
             self.cube[6] = [save[0], (save[1] + 2) % 3]
+        elif move == 'b_prime':
+            save = self.cube[2]
+            self.cube[2] = [self.cube[6][0], (self.cube[6][1] + 1) % 3]
+            self.cube[6] = [self.cube[7][0], (self.cube[7][1] + 2) % 3]
+            self.cube[7] = [self.cube[3][0], (self.cube[3][1] + 1) % 3]
+            self.cube[3] = [save[0], (save[1] + 2) % 3]
         elif move == 'b_twice':
             save2 = self.cube[2]
             save3 = self.cube[3]
