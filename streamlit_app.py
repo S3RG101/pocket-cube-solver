@@ -206,33 +206,7 @@ with col7:
     )
 with col8:
     if st.button('Reset'):
-        cube = [['W','B','R'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W']]
-        color_mapping = {
-            (0, 0): 'W',
-            (0, 1): 'B',
-            (0, 2): 'R',
-            (1, 0): 'W',
-            (1, 1): 'W',
-            (1, 2): 'W',
-            (2, 0): 'W',
-            (2, 1): 'W',
-            (2, 2): 'W',
-            (3, 0): 'W',
-            (3, 1): 'W',
-            (3, 2): 'W',
-            (4, 0): 'W',
-            (4, 1): 'W',
-            (4, 2): 'W',
-            (5, 0): 'W',
-            (5, 1): 'W',
-            (5, 2): 'W',
-            (6, 0): 'W',
-            (6, 1): 'W',
-            (6, 2): 'W',
-            (7, 0): 'W',
-            (7, 1): 'W',
-            (7, 2): 'W',
-        }
+        st.experimental_rerun()
         
     for i in range(4):
         st.write("")
@@ -310,7 +284,8 @@ if button and [8,8] in prog_cube:
     st.write('There is something wrong with the color configuration. Please check again.')
 if button and [8,8] not in prog_cube:
     mixed_cube = ts.Cube(scramble=prog_cube)
-    depth, moves = ts.solve_cube(mixed_cube)
+    with st.spinner('Solving the cube...'):
+        depth, moves = ts.solve_cube(mixed_cube)
     # st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
     moves_dic = {
