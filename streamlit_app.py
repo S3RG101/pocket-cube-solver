@@ -50,7 +50,8 @@ color_mapping = {
 
 # Render the UI for color input
 st.title("2x2 Rubik's Cube Optimal Solver")
-st.write("Please orient the cube such that the white, red and blue corner is located as shown")
+st.write("Please orient the cube such that the white, red and blue corner is located as shown below")
+st.image("cube_orientation.png")
 st.write("Enter the colors for each position on the cube:")
 
 col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
