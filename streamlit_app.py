@@ -277,7 +277,7 @@ for corner in cube:
 button = st.button('Solve')
 
 # fed it into the other python script to solve it
-if button and [8,8] in cube:
+if button and [8,8] in prog_cube:
     st.write('There is something wrong with the color configuration. Please check again.')
 if button and [8,8] not in prog_cube:
     mixed_cube = ts.Cube(scramble=prog_cube)
