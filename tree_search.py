@@ -194,7 +194,7 @@ def move_dic(last_move):
         return all_moves
 
 
-solved_cube = Cube()
+# solved_cube = Cube()
 # mixed_cube = Cube(scramble=[[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [6, 0], [5, 0], [7, 0]])
 # mixed_cube = Cube()
 # mixed_cube.move('b_prime')
@@ -206,6 +206,7 @@ solved_cube = Cube()
 # beginners placing corners is an 8-move! [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [7, 1], [5, 1], [6, 1]] 6 sols.
 
 def solve_cube(mixed_cube):
+    solved_cube = Cube()
     inter = []
     depth = 0
     for depth in range(6):
