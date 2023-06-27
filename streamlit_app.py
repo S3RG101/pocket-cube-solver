@@ -205,7 +205,36 @@ with col7:
         label_visibility="collapsed"
     )
 with col8:
-    for i in range(7):
+    if st.button('Reset'):
+        cube = [['W','B','R'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W'],['W','W','W']]
+        color_mapping = {
+            (0, 0): 'W',
+            (0, 1): 'B',
+            (0, 2): 'R',
+            (1, 0): 'W',
+            (1, 1): 'W',
+            (1, 2): 'W',
+            (2, 0): 'W',
+            (2, 1): 'W',
+            (2, 2): 'W',
+            (3, 0): 'W',
+            (3, 1): 'W',
+            (3, 2): 'W',
+            (4, 0): 'W',
+            (4, 1): 'W',
+            (4, 2): 'W',
+            (5, 0): 'W',
+            (5, 1): 'W',
+            (5, 2): 'W',
+            (6, 0): 'W',
+            (6, 1): 'W',
+            (6, 2): 'W',
+            (7, 0): 'W',
+            (7, 1): 'W',
+            (7, 2): 'W',
+        }
+        
+    for i in range(3):
         st.write("")
     color_mapping[(7, 2)] = st.selectbox(
         '22',
@@ -282,7 +311,7 @@ if button and [8,8] in prog_cube:
 if button and [8,8] not in prog_cube:
     mixed_cube = ts.Cube(scramble=prog_cube)
     depth, moves = ts.solve_cube(mixed_cube)
-    st.write(f'Found a solution of depth {depth} which is the following: {moves}')
+    # st.write(f'Found a solution of depth {depth} which is the following: {moves}')
 
     moves_dic = {
         "r":"Rp.png",
@@ -306,7 +335,7 @@ if button and [8,8] not in prog_cube:
     }
     
     move_arr = moves.split()
-    st.write(move_arr)
+    # st.write(move_arr)
     
     send_img_count = 0
     def send_img():
